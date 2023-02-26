@@ -5,9 +5,9 @@ Console.Write("Введите количество строк: ");
 int m = int.Parse(Console.ReadLine() ?? "0");
 
 int [,] pascal = new int [m+1, 2*m+1];
-for (int k = 0; k < pascal.GetLength(0); k++)
+for (int z = 0; z < pascal.GetLength(0); z++)
 {
-    pascal[k, 0] = 1;
+    pascal[z, 0] = 1;
 }
 for (int i = 1; i < pascal.GetLength(0); i++)
 {
@@ -17,7 +17,7 @@ for (int i = 1; i < pascal.GetLength(0); i++)
     }
 }
 
-Console.WriteLine("\nТреугольник Паскаля");
+Console.WriteLine("Треугольник Паскаля");
 for (int i = 0; i < pascal.GetLength(0); i++)
 {
     for (int j = 0; j < pascal.GetLength(1); j++)
@@ -46,7 +46,7 @@ for (int i = 0; i < pascal.GetLength(0); i++)
 }
 pascal[pascal.GetLength(0) - 1, 0] = 1;
 
-Console.WriteLine("\nВывод в виде равнобедренного треугольника");
+Console.WriteLine("Вывод в виде равнобедренного треугольника");
 for (int i = 0; i < pascal.GetLength(0); i++)
 {
     for (int j = 0; j < pascal.GetLength(1); j++)
