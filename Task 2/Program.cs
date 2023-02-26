@@ -12,7 +12,7 @@ void FillArrayRandomNumbers(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().Next(1, 5); //Для увеличения размера чисел в матрицах поменять число 5 на большее
+            array[i, j] = new Random().Next(1, 10);
         }
     }
 }
@@ -31,7 +31,7 @@ void PrintArray(int[,] array)
     }
 }
 
-int size = InputInt("размерность матриц: ");
+int size = InputInt("Размер матриц: ");
 int[,] matrixA = new int[size, size];
 int[,] matrixB = new int[size, size];
 FillArrayRandomNumbers(matrixA);
@@ -54,6 +54,6 @@ Console.WriteLine();
 Console.WriteLine("Матрица - В");
 PrintArray(matrixB);
 Console.WriteLine();
-Console.WriteLine("Произведение матриц А*В");
+Console.WriteLine("Произведение матрицы А на матрицу В");
 PrintArray(matrixC);
 
