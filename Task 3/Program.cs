@@ -19,14 +19,14 @@ void PrintArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            System.Console.Write($"{array[i, j]}  ");
+            Console.Write($"{array[i, j]}  ");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
     }
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
 
-int[] GetNumsMinRawColumn(int[,] array)     // поиск минимального элемента массива и номеров строки и столбца 
+int[] GetNumsMinRawColumn(int[,] array)      
 {
     int[] numbers = new int[] { 0, 0 };
     int minNumber = array[0, 0];
@@ -47,7 +47,7 @@ int[] GetNumsMinRawColumn(int[,] array)     // поиск минимальног
 
 int[,] RemoteRawColumn(int[,] matrix, int[] array)
 {
-    int[,] matrix2 = new int[matrix.GetLength(0) - 1, matrix.GetLength(1)]; // удаляем строку из исходного массива
+    int[,] matrix2 = new int[matrix.GetLength(0) - 1, matrix.GetLength(1)];
     for (int i = 0; i < matrix2.GetLength(0); i++)
     {
         for (int j = 0; j < matrix2.GetLength(1); j++)
@@ -56,7 +56,7 @@ int[,] RemoteRawColumn(int[,] matrix, int[] array)
             else matrix2[i, j] = matrix[i + 1, j];
         }
     }
-    int[,] resultMatrix = new int[matrix2.GetLength(0), matrix2.GetLength(1) - 1]; // удаляем столбец из массива с удаленной строкой
+    int[,] resultMatrix = new int[matrix2.GetLength(0), matrix2.GetLength(1) - 1];
     {
         for (int i = 0; i < resultMatrix.GetLength(0); i++)
         {
